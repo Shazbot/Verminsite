@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+
+main {
+  padding: 2rem 0;
+  max-width: 900px;
+}
+
+header {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 0.05rem solid #e5e5e5;
+}
+
+footer {
+  border-top: 0.05rem solid #e5e5e5;
+  padding-top: 1.5rem;
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffdf9a;
+  text-shadow: 0 0 4px #fe1912, 0 0 40px #fe1912;
+}
+
+.jumbotron {
+  background-color: #151515;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+/* .parchment {
+  background-image: url("./assets/parchment.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 200px;
+} */
+
+.list-group > :first-child {
+  padding-top: 1rem;
+}
+
+.list-group > :last-child {
+  padding-bottom: 1rem;
+}
+
+.ratio {
+  width: 100%;
+  padding-bottom: 25%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+/*
+div.ratio>div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+} */
+
+div.ratio > div {
+  height: 50%;
+  width: 50%;
+}
+
+.roww {
+  height: 200px;
+}
+
+.card {
+  background-color: #303030;
+}
+
+.card-header {
+  background-color: #444;
+}
+
+.list-group-item {
+  color: white;
+  margin-bottom: -1px;
+  background-color: #303030;
+  border: 1px solid #444;
+  position: relative;
+  display: block;
+  padding: 0.4rem 1.25rem;
+}
+
+/* .list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+} */
+
+/* .list-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+} */
+
+.border-primary {
+  border-color: #375a7f !important;
+}
+
+.quest-keys {
+  font-size: 3rem;
+}
+
+.quest-reward {
+  /* font-size: 1.3rem; */
+  font-size: 4vw;
+  width: 100%;
+  height: 100%;
+}
+
+.card-header {
+  max-height: 1rem;
+}
+
+.quest-key-icon {
+  left: 25px;
+  top: 12px;
+  opacity: 0.3;
+}
+
+h2.background {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+h2.background:before {
+  border-top: 1px solid #ffdf9a;
+  content: "";
+  margin: 0 auto; /* this centers the line to the full width specified */
+  position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+h2.background > span {
+  /* to hide the lines from behind the text, you have to set the background color the same as the container */
+  background: black;
+  padding: 0 15px;
+}
+
+.skulls {
+  text-shadow: 0 0 2px red;
+}

@@ -1,0 +1,123 @@
+{
+    "quests": [{
+        "keys": 6,
+        "slot_type": "ranged",
+        "item_type": "Trueflight Longbow",
+        "traits": [{
+            "name": "Haste",
+            "description": "When hitting an enemy, there is a 5.0 - 12.0% chance to increase your attack speed by 50.0%, for 5.0 seconds. Ammunition is not consumed for a short duration after the effect triggers."
+        }, {
+            "name": "Knockback",
+            "description": "When hitting an enemy, there is a 30.0 - 40.0% chance to knock them back."
+        }, {
+            "name": "Distraction",
+            "description": "Attacking an enemy that is attacking a Knocked Down ally, will extend the ally's Knocked Down health."
+        }],
+        "can_wield": "Waywatcher",
+        "rarity": 4,
+        "reward": "Wydrioth Trueflight "
+    }, {
+        "slot_type": "trinket",
+        "item_type": "Trinket",
+        "traits": [{
+            "name": "Home Brewer",
+            "description": "When drinking a Potion of Speed or Strength there is a 20.0% chance that it won't be consumed."
+        }],
+        "keys": 7,
+        "rarity": 3,
+        "reward": "Flask of Sartosan Rum"
+    }, {
+        "keys": 4,
+        "slot_type": "ranged",
+        "item_type": "Longbow",
+        "traits": [{
+            "name": "Hail of Doom",
+            "description": "Each shot with this weapon has a 5.0 - 15.0% chance to split into 2 projectiles."
+        }, {
+            "name": "Master Crafted",
+            "description": "Attack Speed with this weapon 25.0% faster."
+        }],
+        "can_wield": "Waywatcher",
+        "rarity": 3,
+        "reward": "Moonspring Bow"
+    }],
+    "contracts": [{
+        "level": "The Enemy Below",
+        "difficulty": "Nightmare",
+        "keys": 0,
+        "type": "Bomb Kills",
+        "rewards": {
+            "tokens": {
+                "amount": 20,
+                "type": 4
+            }
+        },
+        "required": 40
+    }, {
+        "level": "Man the Ramparts",
+        "difficulty": "Easy",
+        "keys": 1,
+        "type": "Chests Opened",
+        "rewards": {
+            "boon": "Increased Damage"
+        },
+        "required": 5
+    }, {
+        "level": "The Fall",
+        "difficulty": "Veteran",
+        "keys": 0,
+        "type": "Waves Defeated",
+        "rewards": {
+            "tokens": {
+                "amount": 15,
+                "type": 3
+            }
+        },
+        "required": 7
+    }, {
+        "level": "The Dungeons",
+        "difficulty": "Nightmare",
+        "keys": 1,
+        "type": "Team Protection: Death",
+        "rewards": {
+            "tokens": {
+                "amount": 40,
+                "type": 4
+            }
+        },
+        "required": 4
+    }, {
+        "level": "The Horn of Magnus",
+        "difficulty": "Easy",
+        "keys": 0,
+        "type": "Bomb Kills",
+        "rewards": {
+            "boon": "Increased Stamina"
+        },
+        "required": 40
+    }, {
+        "level": "Summoner's Peak",
+        "difficulty": "Cataclysm",
+        "keys": 2,
+        "type": "Complete Mission",
+        "rewards": {
+            "tokens": {
+                "amount": 60,
+                "type": 4
+            }
+        },
+        "required": 1
+    }, {
+        "level": "Waterfront",
+        "difficulty": "Normal",
+        "keys": 0,
+        "type": "Rat Ogres",
+        "rewards": {
+            "tokens": {
+                "amount": 20,
+                "type": 2
+            }
+        },
+        "required": 1
+    }]
+}

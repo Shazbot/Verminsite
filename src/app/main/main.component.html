@@ -1,0 +1,80 @@
+<main role="main" class="m-auto">
+  <h2 class="background mb-3">
+    <span>Quests</span>
+  </h2>
+
+  <div *ngIf="quests " class="list-group">
+    <div *ngFor="let quest of quests" class="list-group-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+            <h5 class="d-flex d-md-inline-block justify-content-center" style="text-shadow: initial" [style.color]="quest.rarity | rarityToColor">{{quest.reward}}</h5>
+            <div>
+              <div *ngIf="quest.slot_type == SlotType.MELEE || quest.slot_type == SlotType.RANGED">
+                <div class="d-flex flex-md-row flex-column">
+                  <ng-container *ngFor="let trait of quest.traits; let last = last">
+                    <div class="d-flex justify-content-center" placement="bottom" [ngbTooltip]="trait.description">{{trait.name}}
+                      <ng-container *ngIf="!last">
+                        <span class="mr-1">,</span>
+                      </ng-container>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+              <div *ngIf="quest.slot_type == SlotType.TRINKET">
+                <span>{{quest.traits[0].description}}</span>
+              </div>
+              <div *ngIf="quest.slot_type == SlotType.HAT"></div>
+            </div>
+            <div class="mt-1 d-flex d-md-inline-block justify-content-center">
+              <small *ngIf="quest.can_wield" class="">{{quest.can_wield}}</small>
+              <small class="ml-1 ml-md-0">{{quest.item_type}}</small>
+            </div>
+          </div>
+          <div class="col-sm-3 d-flex align-items-center justify-content-center">
+            <span class="quest-keys">{{quest.keys}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="background mt-5">
+    <span>Contracts</span>
+  </h2>
+
+  <div *ngIf="contracts " class="list-group">
+    <div *ngFor="let contract of contracts" class="list-group-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 d-flex flex-column justify-content-center">
+            <h5 class="mb-0 align-self-center align-self-sm-auto" style="text-shadow: initial">
+              {{contract.level}}
+            </h5>
+            <p class="mb-0 align-self-center align-self-sm-auto">{{contract.type}}</p>
+          </div>
+          <div class="col-sm-3 mt-1 mt-sm-0  d-flex justify-content-center align-items-center">
+            <span placement="bottom" [ngbTooltip]="contract.difficulty" class="skulls" [innerHTML]="contract.difficulty | difficultyToSkulls"></span>
+          </div>
+          <div class="col-sm-3 mt-1 mt-sm-0 d-flex flex-column justify-content-center align-items-center">
+            <ng-container *ngIf="contract.rewards.tokens">
+              <div>
+                <span [style.color]="contract.rewards.tokens.type | rarityToColor">{{contract.rewards.tokens.amount}}</span>
+                <span class="ml-1" [style.color]="contract.rewards.tokens.type | rarityToColor">tokens</span>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="contract.rewards.boon">
+              <div class="" [style.color]="contract.rewards.boon | boonToColor">{{contract.rewards.boon}} Boon</div>
+            </ng-container>
+          </div>
+          <div class="col-sm-2 mt-1 mt-sm-0 d-flex justify-content-center align-items-center">
+            <ng-container *ngIf="contract.keys > 0">
+              <div [innerHTML]="contract.keys | keysToKeyIcons"></div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
